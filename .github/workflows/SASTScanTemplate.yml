@@ -17,6 +17,8 @@ jobs:
            java-version: '17'
            distribution: 'temurin'
            cache: 'maven'
+      -  name: Build with Maven
+         run: mvn -B package --file pom.xml
       -  name: Install FindSecBugs
          run: |
            wget -q -O findsecbugs-cli.zip https://github.com/find-sec-bugs/find-sec-bugs/releases/download/version-1.12.0/findsecbugs-cli-1.12.0.zip
