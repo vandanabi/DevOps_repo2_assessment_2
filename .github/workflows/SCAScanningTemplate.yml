@@ -11,9 +11,9 @@ jobs:
     steps:
     -  name: Download Owasp Dependency Checker
        run: |
-         wget -q -O dependency-check-8.4.0.zip https://github.com/jeremylong/DependencyCheck/download/v8.4.0/dependency-check-8.4.0-release.zip
+         wget -q -O dependency-check-8.4.0-release.zip https://github.com/jeremylong/DependencyCheck/download/v8.4.0/dependency-check-8.4.0-release.zip
          ls -l
-         unzip -qq dependency-check-8.4.0.zip
+         unzip -qq dependency-check-8.4.0-release.zip
     -  name: Run Owasp Dependency Checker
        run: ./dependency-check/bin/dependency-check.sh --scan ./ --format HTML --project "DepCheck" --out ./report
        
