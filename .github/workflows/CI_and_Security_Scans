@@ -1,4 +1,4 @@
-#### Creating a worflow to build this java project using maven
+##### Creating a worflow to build this java project using maven
 
 on:
   push:
