@@ -23,5 +23,5 @@ jobs:
        run: mvn -B package --file pom.xml
 
   SecretScanusingtemplate:
-      uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SecretScanning1.yml@main
+      uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SecretScanning1.yml@develop
     
