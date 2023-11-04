@@ -1,0 +1,32 @@
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_call:
+
+jobs:
+    SASTScanUsingFindSecBugs:
+      runs-on: ubuntu-latest
+      steps:
+      -  name: Checkout codebase
+         uses: actions/checkout@v3
+      -  name: Install FindSecBugs
+         run: |
+           wget -q -O findsecbugs-cli.zip https://github.com/find-sec-bugs/find-sec-bugs/releases/download/version-1.12.0/findsecbugs-cli-1.12.0.zip
+           unzip -qq findsecbugs-cli.zip
+           chmod 755 findsecbugs.sh
+           chmod +x findsecbugs.sh
+           ls -l
+           
+      -  name: Run FindSecBugs
+         run: ./findsecbugs.sh -progress -output findsecbugs-results.html -html target/*.jar
+         
+      -  name: Save Report into Artifactory
+         uses: actions/upload-artifact@v2
+         with:
+           name: findsecbugs-report
+           path: findsecbugs-results.html
+      
+    
+    
