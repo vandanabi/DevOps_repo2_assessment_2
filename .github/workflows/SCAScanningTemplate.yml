@@ -17,7 +17,7 @@ jobs:
     -  name: Run Owasp Dependency Checker
        run: ./dependency-check/bin/dependency-check.sh --scan ./ --format HTML --project "DepCheck" --out ./report
     -  name: Save Report into Artifacts
-       uses: action/upload-artifact@v2
+       uses: actions/upload-artifact@v2
        with:
          name: depency-check-report
          path: ./report
