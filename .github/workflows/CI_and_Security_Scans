@@ -12,7 +12,7 @@ jobs:
     with:
       file_path: src/pom.xml
   Secret Scan using template:
-    uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SecretScanning1.yml@develop
+    uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SecretScanningTemplate.yml@develop
   SCA Scan WithOWASP DC:
     uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SCAScanningTemplate.yml@develop
   SAST Scan Using FindSecBugs:
