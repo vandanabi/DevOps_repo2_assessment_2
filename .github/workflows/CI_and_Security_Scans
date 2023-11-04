@@ -1,0 +1,20 @@
+## Creating a worflow to build this java project using maven
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  Build Project with Maven:
+    uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/Mavenbuildtemplate.yml@develop
+    with:
+      file_path: src/pom.xml
+  Secret Scan using template:
+    uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SecretScanning1.yml@develop
+  SCA Scan WithOWASP DC:
+    uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SCAScanningTemplate.yml@develop
+  SAST Scan Using FindSecBugs:
+    uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SASTScanTemplate.yml@develop
+    
