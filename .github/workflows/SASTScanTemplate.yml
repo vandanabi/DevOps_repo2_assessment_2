@@ -12,7 +12,7 @@ jobs:
       -  name: Checkout codebase
          uses: actions/checkout@v3
       -  name: Build with Maven
-         uses: vandanabi/.github/workflows/Mavenbuildtemplate.yml@develop
+         uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/Mavenbuildtemplate.yml@develop
          env:
              POM.XML_Location: ${{secrets.POM_LOCATION}}
          with:
