@@ -6,14 +6,14 @@ on:
     branches: [main]
 
 jobs:
-  Build Project with Maven:
+  Build_Project_with_Maven:
     uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/Mavenbuildtemplate.yml@develop
     with:
       file_path: src/pom.xml
-  Secret Scan using template:
+  Secret_Scan_using_template:
     uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SecretScanningTemplate.yml@develop
-  SCA Scan WithOWASP DC:
+  SCA_Scan_With_OWASP_DC:
     uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SCAScanningTemplate.yml@develop
-  SAST Scan Using FindSecBugs:
+  SAST_Scan_Using_FindSecBugs:
     uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SASTScanTemplate.yml@develop
     
