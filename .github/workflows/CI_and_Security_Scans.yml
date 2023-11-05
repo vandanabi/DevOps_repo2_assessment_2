@@ -1,4 +1,4 @@
-
+# Workflow to build the project and perform secret scan, SCA and SAST scans.
 on:
   push:
     branches: [main]
