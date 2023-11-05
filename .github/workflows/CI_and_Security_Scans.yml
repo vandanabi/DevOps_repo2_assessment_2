@@ -9,7 +9,7 @@ jobs:
   Build_Project_with_Maven:
     uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/Mavenbuildtemplate.yml@develop
     with:
-      file_path: src/pom.xml
+      file_path: /pom.xml
   Secret_Scan_using_template:
     uses: vandanabi/DevOps_repo2_assessment_2/.github/workflows/SecretScanningTemplate.yml@develop
   SCA_Scan_With_OWASP_DC:
