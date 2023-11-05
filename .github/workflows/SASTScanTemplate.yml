@@ -14,7 +14,7 @@ jobs:
       -  name: Build with Maven
          uses: vandanabi/.github/workflows/Mavenbuildtemplate.yml@develop
          env:
-             POM.XML_Location: ${{variables.Pom_Location}}
+             POM.XML_Location: ${{variables.POM_LOCATION}}
          with:
             file_path: $env:POM.XML_Location
       -  name: Install FindSecBugs
