@@ -1,4 +1,6 @@
 on:
+    push:
+        branches: [develop]
     workflow_call:
         inputs:
             file_path:
